@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Landing</title>
+    <title>Error</title>
 </head>
 <body>
 
@@ -13,10 +13,10 @@
         <a href="/login">Login</a>
     </nav>
 
-
-    {% include 'nav.html' %}
-    <h1>Welcome to Fae Bakery!</h1>
-    <p><a href="{{ url_for('login') }}">Login</a> or <a href="{{ url_for('register') }}">Register</a></p>
+    <h2>Login Failed</h2>
+    <p>Incorrect username or password.</p>
+    <a href="{{ url_for('login') }}">Try Again</a><br>
+    <a href="{{ url_for('register') }}">Don't have an account? Register</a>
 
 </body>
 </html>

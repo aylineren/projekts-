@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Landing</title>
+    <title>Articles</title>
 </head>
 <body>
 
@@ -13,10 +13,12 @@
         <a href="/login">Login</a>
     </nav>
 
-
-    {% include 'nav.html' %}
-    <h1>Welcome to Fae Bakery!</h1>
-    <p><a href="{{ url_for('login') }}">Login</a> or <a href="{{ url_for('register') }}">Register</a></p>
+    <h2>Kitchen Lore</h2>
+    <ul>
+        <li><a href="#">Article 1</a></li>
+        <li><a href="#">Article 2</a></li>
+        <!--add articles later-->
+    </ul>
 
 </body>
 </html>
