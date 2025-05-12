@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>About</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
@@ -21,7 +22,11 @@
         <button type="submit">Post</button>
     </form>
     
-    <!--show saved comments-->
+    <!-- Later: dynamically load comments here -->
+    <ul id="guestbook">
+    <li>✨ Your comment will appear here once stored!</li>
+    </ul>
+
 
 </body>
 </html>

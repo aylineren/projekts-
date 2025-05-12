@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Register</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
@@ -13,6 +14,7 @@
         <a href="/login">Login</a>
     </nav>
 
+    <h1>Log in</h1>
     <form action="/login" method="post">
         <label>Username:</label>
         <input type="text" name="username" id="username">

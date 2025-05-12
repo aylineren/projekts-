@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <nav>
+        <a href="/">Faerie Bakery</a>
+        <a href="/articles">Articles</a>
+        <a href="/generator">Recipes</a>
+        <a href="/about">About</a>
+        <a href="/login">Login</a>
+    </nav>
+
+<h1>Register</h1>
+<form action="/register" method="post">
+    <label>Username:</label>
+    <input type="text" name="username" required>
+    <label>Password:</label>
+    <input type="password" name="password" required>
+    <button type="submit">Register</button>
+</form>
+
+
+
+</body>
+</html>

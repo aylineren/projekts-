@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html>
-    
 <head>
     <title>Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-    <nav>
-        <a href="/">Faerie Bakery</a>
-        <a href="/articles">Articles</a>
-        <a href="/generator">Recipes</a>
-        <a href="/about">About</a>
-        <a href="/login">Login</a>
-    </nav>
+    <nav>...</nav>
 
-</html>
-<h2>Hungry?</h2>
-<button onclick="getRecipe()">Get a Recipe!</button>
-<div id="result"></div>
-<script>
-function getRecipe() {
-    fetch("https://www.themealdb.com/api/json/v1/1/random.php")
-    .then(res => res.json())
-    .then(data => {
-        const meal = data.meals[0];
-        document.getElementById('result').innerHTML =
-            `<h3>${meal.strMeal}</h3><img src="${meal.strMealThumb}" width="200"><p>${meal.strInstructions}</p>`;
-    });
-}
-</script>
-  </body>
+    <h2>Hungry?</h2>
+    <button onclick="getRecipe()">Get a Recipe!</button>
+    <div id="result"></div>
+
+    <script>
+        function getRecipe() {
+            fetch("https://www.themealdb.com/api/json/v1/1/random.php")
+                .then(res => res.json())
+                .then(data => {
+                    const meal = data.meals[0];
+                    document.getElementById('result').innerHTML =
+                        `<h3>${meal.strMeal}</h3><img src="${meal.strMealThumb}" width="200"><p>${meal.strInstructions}</p>`;
+                });
+        }
+    </script>
+</body>
 </html>
